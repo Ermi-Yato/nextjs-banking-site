@@ -37,8 +37,8 @@ export const Navbar = () => {
           <div className="hidden lg:block">
             <nav className="flex gap-6">
               {navLinks.map(link => (
-                <Link href={link.href}>
-                  <span>{link.name}</span>
+                <Link href={link.href} key={link.href}>
+                  <span className="text-sm">{link.name}</span>
                 </Link>
               ))}
             </nav>

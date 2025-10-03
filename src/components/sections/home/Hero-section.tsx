@@ -20,25 +20,25 @@ export const Hero = () => {
 
       <div className="container flex flex-col md:grid md:grid-cols-2 gap-20">
         <div>
-          <div className="flex justify-center">
+          <div className="flex justify-center md:justify-start">
             <div className="bg-[#262626] rounded-full h-11 inline-flex items-center px-4 gap-2">
               <Image src={checkbox} alt="checkbox icon" />
               <span className="text-sm font-light">No LLC Required, No Credit Check.</span>
             </div>
           </div>
 
-          <h1 className="text-3xl text-center md:text-left leading-12 font-medium mt-3">Welcome to YourBank Empowering Your <span className="text-[#CAFF33]">Financial Journey</span></h1>
-          <p className="font-light text-sm text-[#E4E4E7] text-center md:text-left leading-[150%] mt-3">
+          <h1 className="text-3xl md:text-4xl text-center md:text-left leading-12 font-medium mt-3 lg:max-w-xl">Welcome to YourBank Empowering Your <span className="text-[#CAFF33]">Financial Journey</span></h1>
+          <p className="font-light text-sm md:text-base text-[#E4E4E7]/80 text-center md:text-left leading-[150%] mt-3">
             At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.
           </p>
-          <div className="flex justify-center md:justify-start mt-8">
+          <div className="flex justify-center md:justify-start mt-10">
             <Button btnType="primary" size="lg" >Open Account</Button>
           </div>
         </div>
 
-        <div>
-          <div className="flex justify-center mt-20 relative">
-            <Image src={arrowImage} alt="arrow Image" className="absolute -right-5 -top-5 -z-10" />
+        <div className="mx-auto">
+          <div className="flex justify-center mt-12 relative">
+            <Image src={arrowImage} alt="arrow Image" className="absolute -right-20 lg:-right-36 -top-10 lg:-top-6 -z-10 size-72" />
             <div className="border border-white/10 p-5 text-xs rounded-lg bg-[#1A1A1A]">
               <Image src={transaction} alt="" />
               <p className="mt-4 font-medium">Money Exchange</p>
@@ -66,12 +66,12 @@ export const Hero = () => {
             </div>
           </div>
 
-          <div className="flex justify-end mt-4">
+          <div className="flex justify-end mt-4 -mr-8">
             <div className="inline-flex items-center bg-[#22251B] px-3 py-2 rounded-full gap-2">
               <span className="text-xs font-light">Supported Currency</span>
               <div className="flex bg-[#191919] gap-1 px-1 py-1 rounded-full">
-                {currencyIcons.map(icon => (
-                  <Image src={icon} alt="icons" />
+                {currencyIcons.map((icon, idx) => (
+                  <Image src={icon} key={idx} alt="icons" />
                 ))}
               </div>
             </div>
