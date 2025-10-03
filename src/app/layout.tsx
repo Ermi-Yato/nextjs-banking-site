@@ -4,7 +4,7 @@ import "./globals.css";
 
 const lexend = Lexend({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"]
+  weight: ["300", "400", "500", "600", "700"]
 });
 
 
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${lexend.className} bg-[#191919] antialiased`}
+        className={`${lexend.className} bg-[#191919] text-white antialiased`}
       >
         {children}
       </body>
