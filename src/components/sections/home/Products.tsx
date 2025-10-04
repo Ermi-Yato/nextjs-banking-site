@@ -25,7 +25,7 @@ const products = [
 
 export const Products = () => {
   return (
-    <section className="py-12">
+    <section className="py-32">
       <div className="container">
         <div className="lg:flex lg:flex-col">
 
@@ -51,7 +51,7 @@ export const Products = () => {
                 <Image src={product.icon} alt="icon" />
               </IConBackground>
               <h2 className="text-xl text-center mt-6">{product.title}</h2>
-              <p className="font-light text-sm text-center text-[#B3B3B3] mt-4 lg:max-w-lg">{product.description}</p>
+              <p className="font-light text-sm lg:text-base text-center text-[#B3B3B3] mt-4 lg:max-w-lg">{product.description}</p>
             </div>
           ))}
         </div>

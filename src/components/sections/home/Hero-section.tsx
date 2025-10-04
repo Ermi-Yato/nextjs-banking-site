@@ -19,7 +19,7 @@ export const Hero = () => {
     <section className="py-6 overflow-x-clip">
 
       <div className="container flex flex-col md:grid md:grid-cols-2 gap-20">
-        <div>
+        <div className="pt-12">
           <div className="flex justify-center md:justify-start">
             <div className="bg-[#262626] rounded-full h-11 inline-flex items-center px-4 gap-2">
               <Image src={checkbox} alt="checkbox icon" />
