@@ -34,13 +34,15 @@ export const Features = () => {
         <div>
           <SectionHeader title="Our Features" description="Experience a host of powerful features at YourBank, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience" />
         </div>
-        <div className="mt-12 flex flex-col gap-5 lg:flex-row">
-          <div className="bg-[#1C1C1C] px-4 py-6 lg:p-8 rounded-xl flex overflow-x-clip gap-4 lg:flex-col w-fit h-fit">
-            {featureTags.map((feature, idx) => (
-              <div key={idx} className={idx === 0 ? "border border-[#262626] px-5 py-3 rounded-full whitespace-nowrap text-[#CAFF33] bg-[#1A1A1A]" : "border border-[#262626] px-5 py-3 rounded-full whitespace-nowrap"}>
-                <span className="text-sm">{feature}</span>
-              </div>
-            ))}
+        <div className="mt-12 flex flex-col gap-5 lg:flex-row overflow-x-clip">
+          <div className="mx-auto">
+            <div className="bg-[#1C1C1C] px-4 py-6 lg:p-8 rounded-xl flex gap-4 lg:flex-col w-fit h-fit">
+              {featureTags.map((feature, idx) => (
+                <div key={idx} className={idx === 0 ? "border border-[#262626] px-5 py-3 rounded-full whitespace-nowrap text-[#CAFF33] bg-[#1A1A1A]" : "border border-[#262626] px-5 py-3 rounded-full whitespace-nowrap"}>
+                  <span className="text-sm">{feature}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="flex flex-col gap-5 lg:grid lg:grid-cols-2 lg:grid-rows-2">
