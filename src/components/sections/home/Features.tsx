@@ -49,7 +49,7 @@ export const Features = () => {
             {features.map(feature => (
               <div key={feature.title} className="bg-[#1C1C1C] border border-[#262626] rounded-xl p-8">
                 <div className="flex items-center justify-between">
-                  <span className="text-xl">{feature.title}</span>
+                  <span className="text-lg">{feature.title}</span>
                   <Image src={uprightArrow} alt="arrow icon" />
                 </div>
                 <p className="text-sm lg:text-base font-light text-[#B3B3B3] mt-5">{feature.description}</p>

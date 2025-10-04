@@ -32,8 +32,7 @@ export const Products = () => {
           <h2 className="font-medium text-3xl text-center lg:text-left">Our <span className="text-[#CAFF33]">Products</span></h2>
 
           <div className="lg:flex lg:items-center lg:justify-between">
-            <p className="text-[#B3B3B3] font-light text-sm text-center mt-4 lg:text-left md:max-w-xl">Discover a range of comprehensive and customizable banking products at YourBank, designed to suit your unique financial needs and aspirations.</p>
-
+            <p className="text-[#B3B3B3] font-light text-sm lg:text-base text-center mt-4 lg:text-left lg:max-w-4xl">Discover a range of comprehensive and customizable banking products at YourBank, designed to suit your unique financial needs and aspirations.</p>
             <div className="flex justify-center mt-6">
               <div className="rounded-full border border-[#262626] bg-[#1C1C1C] inline-flex text-sm px-2 py-2 md:whitespace-nowrap items-center">
                 <Button btnType="primary" size="sm">For Individuals</Button>
@@ -44,7 +43,7 @@ export const Products = () => {
 
         </div>
 
-        <div className="flex justify-center flex-col lg:flex-row items-center gap-8 lg:gap-12 mt-12">
+        <div className="flex justify-center flex-col lg:flex-row items-center gap-8 lg:gap-12 mt-12 lg:mt-24">
           {products.map(product => (
             <div key={product.title} className="py-6 px-4">
               <IConBackground>
