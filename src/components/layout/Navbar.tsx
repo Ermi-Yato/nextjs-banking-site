@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Button } from "../ui/Button"
 import abstractDesign from "@/assets/images/mobile-abstract.svg"
 
-const navLinks = [
+export const navLinks = [
   {
     name: "Home",
     href: "/"

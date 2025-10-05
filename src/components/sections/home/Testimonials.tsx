@@ -36,17 +36,17 @@ export const Testimonials = () => {
           </div>
         </div>
 
-        <div className="flex mt-12 p-5  border border-[#262626] rounded-xl overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_30%,black_70%,transparent)]">
-          <div className="flex gap-12">
+        <div className="flex lg:justify-center mt-12 p-5  border border-[#262626] rounded-xl overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_30%,black_70%,transparent)]">
+          <div className="flex gap-12 lg:gap-24">
             {testimonials.map(testimonial => (
-              <div key={testimonial.name} className="flex-none">
+              <div key={testimonial.name} className="flex-none -translate-x-[365px] lg:-translate-x-0">
                 <div className="flex flex-row justify-between items-center gap-4">
                   <hr className="w-full text-[#262626]" />
                   <Image src={quoteICon} alt="icon" />
                   <hr className="w-full text-[#262626]" />
                 </div>
-                <p className="text-sm text-center mt-6 max-w-xs mx-auto">{testimonial.feedback}</p>
-                <h5 className="text-[#CAFF33] font-medium text-center mt-6">{testimonial.name}</h5>
+                <p className="text-sm lg:text-base text-center mt-6 lg:mt-12 max-w-xs mx-auto">{testimonial.feedback}</p>
+                <h5 className="text-[#CAFF33] font-medium text-center mt-6 lg:mt-12">{testimonial.name}</h5>
               </div>
             ))}
           </div>

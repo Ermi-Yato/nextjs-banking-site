@@ -1,5 +1,7 @@
 import { SectionHeader } from "@/components/SectionHeader"
 import { Button } from "@/components/ui/Button"
+import chevronArrow from "@/assets/icons/keyboardArrowDown.svg"
+import Image from "next/image"
 
 const faqs = [
   {
@@ -39,7 +41,10 @@ export const FAQ = () => {
         </div>
 
         <div className="flex justify-center">
-          <Button btnType="secondary" size="lg" className="text-sm border border-[#262626]">Load All FAQ&apos;s</Button>
+          <Button btnType="secondary" size="lg" className="text-sm border border-[#262626] inline-flex items-center gap-1">
+            <span>Load All FAQ&apos;s</span>
+            <Image src={chevronArrow} alt="" className="mt-0.5" />
+          </Button>
         </div>
 
       </div>
