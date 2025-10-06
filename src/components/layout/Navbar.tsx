@@ -31,9 +31,10 @@ export const Navbar = () => {
       <Image src={abstractDesign} alt="" className="absolute top-0 left-0 -z-10" />
       <div className="container">
         <div className="bg-[#1c1c1c] border border-[#262626] rounded-full flex justify-between items-center h-16 px-4 pl-6">
-          <Image src={logoMobile} alt="mobile logo" className="md:hidden" />
-          <Image src={logoDesktop} alt="mobile logo" className="hidden md:block" />
-
+          <Link href="/">
+            <Image src={logoMobile} alt="mobile logo" className="md:hidden" />
+            <Image src={logoDesktop} alt="mobile logo" className="hidden md:block" />
+          </Link>
           <div className="hidden lg:block">
             <nav className="flex gap-6">
               {navLinks.map(link => (
@@ -47,7 +48,7 @@ export const Navbar = () => {
           <div className="hidden md:block">
             <div className="flex gap-2">
               <Button btnType="secondary" size="md">Sign Up</Button>
-              <Button btnType="primary" size="md">Login</Button>
+              <Button btnType="primary" size="md" dropShadow="yes">Login</Button>
             </div>
           </div>
           <div className="w-14 h-10 bg-[#CAFF33] inline-flex items-center rounded-full justify-center md:hidden">

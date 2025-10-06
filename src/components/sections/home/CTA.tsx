@@ -20,7 +20,7 @@ export const Cta = () => {
             </div>
 
             <div className="flex justify-center whitespace-nowrap">
-              <Button btnType="primary" size="lg" className="mt-6">Open Account</Button>
+              <Button btnType="primary" size="lg" dropShadow="yes" className="mt-6">Open Account</Button>
             </div>
           </div>
 

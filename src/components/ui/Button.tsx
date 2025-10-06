@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority"
 import { ButtonHTMLAttributes } from "react"
 
-const buttonClasses = cva("px-6 rounded-full", {
+const buttonClasses = cva("px-6 rounded-full cursor-pointer", {
   variants: {
     btnType: {
       primary: "bg-[#CAFF33] text-[#1c1c1c]",
@@ -11,18 +11,23 @@ const buttonClasses = cva("px-6 rounded-full", {
       sm: "h-10",
       md: "h-11",
       lg: "h-12"
+    },
+    dropShadow: {
+      yes: "hover:drop-shadow-[0_0_10px_rgba(202,255,51,0.5)] hover:scale-105 transition-all duration-200",
+      no: ""
     }
   }
 })
 
-export const Button = (props: { btnType: 'primary' | 'secondary', size?: 'sm' | 'md' | 'lg' } & ButtonHTMLAttributes<HTMLButtonElement>) => {
-  const { btnType, className, size, ...otherProps } = props
+export const Button = (props: { btnType: 'primary' | 'secondary', size?: 'sm' | 'md' | 'lg', dropShadow?: 'yes' | 'no' } & ButtonHTMLAttributes<HTMLButtonElement>) => {
+  const { btnType, className, size, dropShadow, ...otherProps } = props
   return (
     <button
       className={buttonClasses({
         btnType,
         size,
-        className
+        dropShadow,
+        className,
       })}
       {...otherProps}
     />
