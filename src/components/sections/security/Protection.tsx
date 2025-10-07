@@ -59,8 +59,6 @@ export default function Protection() {
           </div>
         </div>
       </div>
-      <FAQ />
-      <Footer />
     </section>
   )
 }

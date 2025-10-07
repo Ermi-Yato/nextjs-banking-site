@@ -1,9 +1,14 @@
-export const SectionHeader = (props: { title: string, description: string }) => {
-  const { title, description } = props
+import { PropsWithChildren } from "react"
+
+type Props = {
+  description: string
+}
+
+export const SectionHeader = ({ description, children }: PropsWithChildren<Props>) => {
   return (
     <div>
-      <h2 className="text-[#CAFF33] text-3xl lg:text-4xl text-center lg:text-left font-medium">{title}</h2>
-      <p className="text-center lg:text-left text-[#B3B3B3] font-light text-sm lg:text-base mt-4">{description}</p>
+      {children}
+      <p className="text-center lg:text-left text-[#B3B3B3] font-light text-sm lg:text-base mt-4 lg:max-w-5xl">{description}</p>
     </div>
   )
 }

@@ -27,10 +27,13 @@ export const FAQ = () => {
     <section className="py-20 lg:py-32">
       <div className="container">
         <div>
-          <SectionHeader title="Frequently Asked Questions" description="Still you have any questions? Contact our Team via support@yourbank.com" />
+          <SectionHeader
+            description="Still you have any questions? Contact our Team via support@yourbank.com">
+            <h2 className="font-medium text-3xl lg:text-4xl text-center lg:text-left leading-12"><span className="text-[#CAFF33]">Frequently</span> Asked Questions</h2>
+          </SectionHeader>
         </div>
 
-        <div className="mt-6 lg:mt-20 flex flex-col gap-5 [mask-image:linear-gradient(to_top,transparent,black_50%,black)] lg:grid lg:grid-cols-2 lg:grid-rows-2">
+        <div className="mt-12 lg:mt-20 flex flex-col gap-5 [mask-image:linear-gradient(to_top,transparent,black_40%,black)] lg:grid lg:grid-cols-2 lg:grid-rows-2">
           {faqs.map(faq => (
             <div key={faq.question} className="p-8 border border-[#262626] rounded-xl">
               <h3 className="text-lg font-medium">{faq.question}</h3>
