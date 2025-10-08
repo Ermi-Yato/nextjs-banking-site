@@ -32,7 +32,10 @@ export const Features = () => {
     <section className="py-14">
       <div className="container">
         <div>
-          <SectionHeader title="Our Features" description="Experience a host of powerful features at YourBank, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience" />
+          <SectionHeader
+            description="Experience a host of powerful features at YourBank, including seamless online banking, secure transactions, and personalized financial insights, all designed to enhance your banking experience" >
+            <h2>Our <span className="text-[#CAFF33] font-medium text-3xl lg:text-4xl text-center lg:text-left">Features</span></h2>
+          </SectionHeader>
         </div>
         <div className="mt-12 flex flex-col gap-5 lg:flex-row overflow-x-clip">
           <div className="mx-auto">

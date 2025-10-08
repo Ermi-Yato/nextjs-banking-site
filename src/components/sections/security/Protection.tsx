@@ -1,4 +1,3 @@
-import { FAQ } from "../home/FAQ"
 import { IConBackground } from "@/components/ui/IconBackground"
 import asfaltImage from "@/assets/images/source_asfalt-light.png"
 import appsGridIcon from "@/assets/icons/appsGridIcon.svg"
@@ -6,7 +5,6 @@ import stackedLayersIcon from "@/assets/icons/layersIcon.svg"
 import sparkleIcon from "@/assets/icons/sparkleIcon.svg"
 import rupeeIcon from "@/assets/icons/rupeeIcon.svg"
 import Image from "next/image"
-import { Footer } from "@/components/layout/Footer"
 
 const protectionMethods = [
   {
