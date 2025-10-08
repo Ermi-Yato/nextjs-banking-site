@@ -10,7 +10,7 @@ const lexend = Lexend({
 
 
 export const metadata: Metadata = {
-  title: "Bank",
+  title: "YourBank",
   description: "",
 };
 

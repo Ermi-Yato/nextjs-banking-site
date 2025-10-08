@@ -101,7 +101,10 @@ export const UseCases = () => {
       <div className="container">
         <div>
 
-          <SectionHeader title="Use Cases" description="At YourBank, we cater to the diverse needs of individuals and businesses alike, offering a wide range of financial solutions" />
+          <SectionHeader
+            description="At YourBank, we cater to the diverse needs of individuals and businesses alike, offering a wide range of financial solutions" >
+            <h2 className="text-[#CAFF33] font-medium text-3xl lg:text-4xl text-center lg:text-left">Use Cases</h2>
+          </SectionHeader>
           <UseCaseComponent useCases={useCases} stats={stats} useCasesSections={useCasesSections} backgroundImage={abstractDesign} />
           <UseCaseComponent useCases={useCasesTwo} stats={statsTwo} useCasesSections={useCasesSectionsTwo} backgroundImage={abstractDesignTwo} imageClassName="absolute right-0 size-36 lg:size-52" className="lg:order-last" />
 
