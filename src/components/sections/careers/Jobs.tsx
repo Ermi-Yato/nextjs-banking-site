@@ -48,7 +48,7 @@ export default function Jobs() {
 
         <div className="mt-16 flex flex-col gap-5 lg:grid lg:grid-cols-2">
           {jobsInfo.map(info => (
-            <div key={info.title} className="bg-[#1C1C1C] rounded-2xl border border-[#262626] p-6 md:p-10 flex flex-col gap-8 justify-between">
+            <div key={info.title} className="bg-[#1C1C1C] rounded-2xl border border-[#262626] p-6 md:p-10 flex flex-col gap-8">
               <div>
                 <h3 className="text-xl lg:text-2xl font-semibold">{info.title}</h3>
                 <div className="inline-flex flex-col lg:flex-row gap-2 mt-3">
@@ -59,7 +59,7 @@ export default function Jobs() {
 
               <div>
                 <h4 className="font-semibold text-lg lg:text-xl">About This Job</h4>
-                <p className="text-[#B3B3B3] font-light max-w-2xs md:max-w-full text-sm lg:text-base mt-3">{info.about}</p>
+                <p className="text-[#B3B3B3] font-light md:max-w-full text-sm lg:text-base mt-3">{info.about}</p>
               </div>
 
               <div>
