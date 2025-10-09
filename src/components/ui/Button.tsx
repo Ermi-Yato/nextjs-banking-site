@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority"
 import { ButtonHTMLAttributes } from "react"
 
-const buttonClasses = cva("px-6 rounded-full cursor-pointer", {
+const buttonClasses = cva("px-6 rounded-full cursor-pointer text-sm", {
   variants: {
     btnType: {
       primary: "bg-[#CAFF33] text-[#1c1c1c]",

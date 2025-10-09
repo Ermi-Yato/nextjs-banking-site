@@ -47,8 +47,12 @@ export const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <div className="flex gap-2">
-              <Button btnType="secondary" size="md">Sign Up</Button>
-              <Button btnType="primary" size="md" dropShadow="yes">Login</Button>
+              <Link href="/signup">
+                <Button btnType="secondary" size="md">Sign Up</Button>
+              </Link>
+              <Link href="/login">
+                <Button btnType="primary" size="md" dropShadow="yes">Login</Button>
+              </Link>
             </div>
           </div>
           <div className="w-14 h-10 bg-[#CAFF33] inline-flex items-center rounded-full justify-center md:hidden">
