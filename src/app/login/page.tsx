@@ -10,6 +10,7 @@ import eyeIcon from "@/assets/icons/eyeIcon.svg"
 import { Footer } from "@/components/layout/Footer";
 import { Testimonials } from "@/components/sections/home/Testimonials";
 import { InputField } from "@/components/ui/InputField";
+import Link from "next/link";
 
 const socialIcons = [
   google,
@@ -52,7 +53,9 @@ export default function Login() {
               <div className="lg:max-w-sm lg:mx-auto mt-8">
                 <div className="flex flex-col gap-6 mt-6">
                   <Button btnType="primary" size="lg" dropShadow="yes">Login</Button>
-                  <Button btnType="secondary" size="lg" dropShadow="yes" className="border border-[#333333] bg-[#262626]">Sign Up</Button>
+                  <Link href="/signup">
+                    <Button btnType="secondary" size="lg" dropShadow="yes" className="border border-[#333333] bg-[#262626]">Sign Up</Button>
+                  </Link>
                 </div>
                 <div className="flex items-center gap-4 mt-6 text-sm text-[#B3B3B3]">
                   <hr className="flex-1 border-t border-[#B3B3B3]" />
