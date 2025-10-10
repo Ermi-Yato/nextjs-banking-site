@@ -13,7 +13,7 @@ const buttonClasses = cva("px-6 rounded-full cursor-pointer text-sm", {
       lg: "h-12"
     },
     dropShadow: {
-      yes: "hover:drop-shadow-[0_0_10px_rgba(202,255,51,0.5)] hover:scale-105 transition-all duration-200",
+      yes: "hover:drop-shadow-[0_0_5px_rgba(202,255,51,0.5)] hover:scale-102 transition-all duration-200",
       no: ""
     }
   }
