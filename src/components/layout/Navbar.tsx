@@ -48,7 +48,7 @@ export const Navbar = () => {
           <div className="hidden md:block">
             <div className="flex gap-2">
               <Link href="/signup">
-                <Button btnType="secondary" size="md">Sign Up</Button>
+                <Button btnType="secondary" size="md" dropShadow="yes">Sign Up</Button>
               </Link>
               <Link href="/login">
                 <Button btnType="primary" size="md" dropShadow="yes">Login</Button>

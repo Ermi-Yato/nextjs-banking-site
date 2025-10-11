@@ -54,11 +54,11 @@ export default function Login() {
               <div className="lg:max-w-sm lg:mx-auto mt-8">
                 <div className="flex flex-col gap-6 mt-6">
                   <Button btnType="primary" size="lg" dropShadow="yes">Sign Up</Button>
-                  <Link href="/login">
-                    <Button btnType="secondary" size="lg" dropShadow="yes" className="border border-[#333333] bg-[#262626]">Login</Button>
+                  <Link href="/login" className="w-full flex">
+                    <Button btnType="secondary" size="lg" dropShadow="yes" className="border border-[#333333] bg-[#262626] flex-1">Login</Button>
                   </Link>
                 </div>
-                <div className="flex items-center gap-4 mt-6 text-sm text-[#B3B3B3]">
+                <div className="flex items-center gap-4 mt-6 lg:mt-10 text-sm text-[#B3B3B3]">
                   <hr className="flex-1 border-t border-[#B3B3B3]" />
                   <span>Or Continue with</span>
                   <hr className="flex-1 border-t border-[#B3B3B3]" />
