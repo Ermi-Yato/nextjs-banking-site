@@ -27,7 +27,7 @@ export const Hero = () => {
             </div>
           </div>
 
-          <h1 className="text-3xl md:text-4xl text-center md:text-left leading-12 font-medium mt-3 lg:max-w-xl">Welcome to YourBank Empowering Your <span className="text-[#CAFF33]">Financial Journey</span></h1>
+          <h1 className="text-3xl md:text-4xl text-center md:text-left leading-12 font-medium mt-3 lg:mt-6 lg:max-w-xl">Welcome to YourBank Empowering Your <span className="text-[#CAFF33]">Financial Journey</span></h1>
           <p className="font-light text-sm md:text-base text-[#E4E4E7]/80 text-center md:text-left leading-[150%] mt-3">
             At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers needs.
           </p>
