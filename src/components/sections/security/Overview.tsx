@@ -1,3 +1,7 @@
+// =======================================
+// Security page: Hero overview section
+// =======================================
+
 import securityImage from "@/assets/images/Image.svg"
 import OverviewComponent from "@/components/OverviewComponent"
 

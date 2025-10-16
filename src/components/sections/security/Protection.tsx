@@ -1,3 +1,7 @@
+// =======================================
+// Security page: Protection section
+// =======================================
+
 import { IConBackground } from "@/components/ui/IconBackground"
 import asfaltImage from "@/assets/images/source_asfalt-light.png"
 import appsGridIcon from "@/assets/icons/appsGridIcon.svg"

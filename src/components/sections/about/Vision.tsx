@@ -1,3 +1,7 @@
+// ========================================
+// About page: Missions and Visions section
+// ========================================
+
 import { SectionHeader } from "@/components/SectionHeader"
 import successImage from "@/assets/images/financial-successImage.svg"
 import humanEye from "@/assets/images/humanEye.svg"
@@ -20,7 +24,7 @@ const missionAndVision = [
 
 export const Vision = () => {
   return (
-    <section className="py-20">
+    <section className="py-20 lg:py-32">
       <div className="container">
         <SectionHeader description="We envision being a leading force in the industry, driven by innovation, integrity, and inclusivity, creating a brighter financial future for individuals and businesses while maintaining a strong commitment to customer satisfaction and community development.">
           <h2 className="text-3xl lg:text-4xl text-center lg:text-left font-medium text-[#CAFF33]">Mission & Vision</h2>

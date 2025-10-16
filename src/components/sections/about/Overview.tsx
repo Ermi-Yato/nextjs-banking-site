@@ -1,3 +1,7 @@
+// =======================================
+// About page: Hero overview section
+// =======================================
+
 import OverviewComponent from "@/components/OverviewComponent";
 import image from "@/assets/images/aboutHeroImage.svg"
 import { Navbar } from "@/components/layout/Navbar";

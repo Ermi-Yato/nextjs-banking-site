@@ -5,7 +5,7 @@ import locationIcon from "@/assets/icons/location.svg"
 import facebook from "@/assets/icons/facebook.svg"
 import x from "@/assets/icons/twitter.svg"
 import linkdin from "@/assets/icons/linkdin.svg"
-import { navLinks } from "./Navbar"
+import { navLinks } from "@/constants/navLinks"
 import Image from "next/image"
 import Link from "next/link"
 
