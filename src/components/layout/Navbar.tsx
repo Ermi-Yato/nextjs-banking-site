@@ -15,13 +15,14 @@ import { usePathname } from "next/navigation"
 import { navLinks } from "@/constants/navLinks"
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
+import { twMerge } from "tailwind-merge"
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathName = usePathname()
 
   return (
-    <header className="py-10 fixed top-0 w-full z-10">
+    <header className="py-10 fixed top-0 w-full z-20">
       <Image src={abstractDesign} alt="" className="absolute top-0 left-0 -z-10" />
       <div className="container">
         <div className="bg-[#1c1c1c] border border-[#262626] rounded-4xl flex flex-col gap-4">
@@ -56,8 +57,14 @@ export const Navbar = () => {
             </div>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="w-14 h-10 bg-[#CAFF33] inline-flex items-center rounded-full justify-center md:hidden">
-              <Image src={hamburger} alt="menu icon" />
+              className="w-14 h-10 bg-[#CAFF33] inline-flex items-center rounded-full justify-center lg:hidden">
+              {/* <Image src={hamburger} alt="menu icon" /> */}
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1C1C1C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-menu md:hidden" >
+                <line x1="3" y1="6" x2="21" y2="6" className={twMerge("origin-left transition duration-300", isMenuOpen && "rotate-45 -translate-y-1")}></line>
+                <line x1="3" y1="12" x2="21" y2="12" className={twMerge(isMenuOpen && "opacity-0")}></line>
+                <line x1="3" y1="18" x2="21" y2="18" className={twMerge("origin-left transition duration-300", isMenuOpen && "-rotate-45 translate-y-1")}></line>
+
+              </svg>
             </button>
           </div>
 
