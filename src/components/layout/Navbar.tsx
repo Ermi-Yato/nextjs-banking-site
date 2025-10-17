@@ -14,13 +14,14 @@ import abstractDesign from "@/assets/images/mobile-abstract.svg"
 import { usePathname } from "next/navigation"
 import { navLinks } from "@/constants/navLinks"
 import { useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathName = usePathname()
 
   return (
-    <header className="py-10 relative">
+    <header className="py-10 fixed top-0 w-full z-10">
       <Image src={abstractDesign} alt="" className="absolute top-0 left-0 -z-10" />
       <div className="container">
         <div className="bg-[#1c1c1c] border border-[#262626] rounded-4xl flex flex-col gap-4">
@@ -43,7 +44,7 @@ export const Navbar = () => {
             </div>
 
 
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <div className="flex gap-2">
                 <Link href="/signup">
                   <Button btnType="secondary" size="md" dropShadow="yes">Sign Up</Button>
@@ -60,26 +61,35 @@ export const Navbar = () => {
             </button>
           </div>
 
-          {isMenuOpen && (
-            <div className="p-6">
+          <AnimatePresence initial={false}>
+            {isMenuOpen && (
+              <motion.div
+                initial={{ opacity: 0, scaleY: 0 }}
+                animate={{ opacity: 1, scaleY: 1 }}
+                exit={{ opacity: 0, scaleY: 0 }}
+                transition={{ duration: 0.2, ease: "linear" }}
 
-              {navLinks.map((link) => {
-                const isActive = pathName === link.href
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`block text-sm py-4 rounded-xl text-center ${isActive ? "bg-[#262626] text-[#CAFF33]" : "text-[#B3B3B3]"
-                      }`}
-                    onClick={() => setIsMenuOpen(false)} // close menu after navigation
-                  >
-                    {link.name}
-                  </Link>
-                )
-              })}
 
-            </div>
-          )}
+                className="flex flex-col justify-center items-center gap-4 py-4 overflow-hidden">
+
+                {navLinks.map((link) => {
+                  const isActive = pathName === link.href
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className={`block text-sm py-4 w-80 rounded-xl text-center ${isActive ? "bg-[#262626] text-[#CAFF33]" : "text-[#B3B3B3]"
+                        }`}
+                      onClick={() => setIsMenuOpen(false)} // close menu after navigation
+                    >
+                      {link.name}
+                    </Link>
+                  )
+                })}
+
+              </motion.div>
+            )}
+          </AnimatePresence>
 
         </div>
       </div>

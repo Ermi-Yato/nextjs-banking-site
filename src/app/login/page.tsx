@@ -24,7 +24,7 @@ export default function Login() {
   return (
     <>
       <Navbar />
-      <section>
+      <section className="mt-28 lg:mt-36">
         <div className="container">
           <div className="p-8 lg:py-20 bg-[#1C1C1C] rounded-2xl border border-[#262626] lg:max-w-5xl lg:mx-auto relative z-0">
 

@@ -16,7 +16,7 @@ const currencyIcons = [
 
 export const Hero = () => {
   return (
-    <section className="py-6 overflow-x-clip">
+    <section className="py-6 overflow-x-clip mt-24 lg:mt-36">
 
       <div className="container flex flex-col md:grid md:grid-cols-2 gap-20">
         <div className="pt-12">

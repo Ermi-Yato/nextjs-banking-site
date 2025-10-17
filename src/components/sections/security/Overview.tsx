@@ -7,7 +7,7 @@ import OverviewComponent from "@/components/OverviewComponent"
 
 export default function Overview() {
   return (
-    <>
+    <div className="mt-28 lg:mt-36">
 
       <OverviewComponent
         heroImage={securityImage}
@@ -16,6 +16,6 @@ export default function Overview() {
         </h2>
       </OverviewComponent>
 
-    </>
+    </div>
   )
 }
