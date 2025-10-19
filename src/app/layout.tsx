@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import "./globals.css";
 import { PageTransitionProvider } from "@/components/pageTransitionProvider";
+import { Navbar } from "@/components/layout/Navbar";
 
 const lexend = Lexend({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body
         className={`${lexend.className} bg-[#191919] text-white antialiased`}
       >
+        <Navbar />
         <PageTransitionProvider>
           {children}
         </PageTransitionProvider>

@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/layout/Navbar";
 import { Button } from "@/components/ui/Button";
 import { IConBackground } from "@/components/ui/IconBackground"
 import Image from "next/image"
@@ -23,7 +22,6 @@ const inputClasses = "flex-1 bg-transparent outline-none placeholder:font-light 
 export default function Login() {
   return (
     <>
-      <Navbar />
       <section className="mt-28 lg:mt-36">
         <div className="container">
           <div className="p-8 lg:py-20 bg-[#1C1C1C] rounded-2xl border border-[#262626] lg:max-w-5xl lg:mx-auto relative z-0">

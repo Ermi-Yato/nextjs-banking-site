@@ -1,11 +1,9 @@
 import OverviewComponent from "@/components/OverviewComponent";
 import image from "@/assets/icons/careersImage.svg"
-import { Navbar } from "@/components/layout/Navbar";
 
 export default function Overview() {
   return (
     <>
-      <Navbar />
       <div className="mt-28 lg:mt-36">
         <OverviewComponent
           heroImage={image}

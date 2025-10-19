@@ -6,7 +6,7 @@
 
 import logoMobile from "@/assets/icons/Logo-mobile.svg"
 import logoDesktop from "@/assets/icons/Logo-desktop.svg"
-import hamburger from "@/assets/icons/hamburger.svg"
+// import hamburger from "@/assets/icons/hamburger.svg"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "../ui/Button"
@@ -16,6 +16,7 @@ import { navLinks } from "@/constants/navLinks"
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { twMerge } from "tailwind-merge"
+import MotionLink from "../MotionLink"
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -36,9 +37,9 @@ export const Navbar = () => {
                 {navLinks.map((link) => {
                   const isActive: boolean = pathName === link.href
                   return (
-                    <Link href={link.href} key={link.href}>
+                    <MotionLink href={link.href} key={link.href}>
                       <span className={`text-sm px-4 py-3 rounded-3xl ${isActive ? "bg-[#262626]" : ""}`}>{link.name}</span>
-                    </Link>
+                    </MotionLink>
                   )
                 })}
               </nav>
