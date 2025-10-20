@@ -5,11 +5,11 @@ import abstractImage from "@/assets/images/Abstract Design (3).svg"
 import google from "@/assets/icons/googleIcon.svg"
 import facebook from "@/assets/icons/loginFacebook.svg"
 import apple from "@/assets/icons/appleIcon.svg"
-import eyeIcon from "@/assets/icons/eyeIcon.svg"
 import { Footer } from "@/components/layout/Footer";
 import { Testimonials } from "@/components/sections/home/Testimonials";
 import { InputField } from "@/components/ui/InputField";
 import Link from "next/link";
+import { PasswordInput } from "@/components/PasswordInput";
 
 const socialIcons = [
   google,
@@ -17,12 +17,11 @@ const socialIcons = [
   apple
 ]
 
-const inputClasses = "flex-1 bg-transparent outline-none placeholder:font-light placeholder:text-[#59595A] text-sm text-[#B3B3B3]"
 
 export default function Login() {
   return (
     <>
-      <section className="mt-28 lg:mt-36">
+      <section className="mt-32 lg:mt-36">
         <div className="container">
           <div className="p-8 lg:py-20 bg-[#1C1C1C] rounded-2xl border border-[#262626] lg:max-w-5xl lg:mx-auto relative z-0">
 
@@ -35,17 +34,7 @@ export default function Login() {
 
               <form className="mt-10 lg:mt-16 flex flex-col lg:grid lg:grid-cols-2 gap-4 lg:gap-6">
                 <InputField type="email" name="email" placeholder="Enter your Email" />
-                <div className="p-4 lg:p-5 rounded-full bg-[#191919] border border-[#262626] flex items-center justify-between">
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="Enter your Password"
-                    required
-                    className={inputClasses}
-                  />
-                  <Image src={eyeIcon} alt="Show password" className="ml-2 cursor-pointer" />
-                </div>
-
+                <PasswordInput />
               </form>
               <p className="mt-6 lg:mt-8 text-center text-sm">Forgot Password?</p>
               <div className="lg:max-w-sm lg:mx-auto mt-8">

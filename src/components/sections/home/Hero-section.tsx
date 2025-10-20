@@ -9,6 +9,7 @@ import icon from "@/assets/icons/Icon.svg"
 import icon1 from "@/assets/icons/Icon-1.svg"
 import icon2 from "@/assets/icons/Icon-2.svg"
 import icon3 from "@/assets/icons/Icon-3.svg"
+import Link from "next/link"
 
 const currencyIcons = [
   icon, icon1, icon2, icon3
@@ -32,7 +33,9 @@ export const Hero = () => {
             At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers needs.
           </p>
           <div className="flex justify-center md:justify-start mt-10">
-            <Button btnType="primary" size="lg" dropShadow="yes" >Open Account</Button>
+            <Link href="/signup">
+              <Button btnType="primary" size="lg" dropShadow="yes" >Open Account</Button>
+            </Link>
           </div>
         </div>
 

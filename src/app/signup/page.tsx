@@ -1,5 +1,3 @@
-"use client"
-
 import { Button } from "@/components/ui/Button";
 import { IConBackground } from "@/components/ui/IconBackground"
 import Image from "next/image"
@@ -7,12 +5,11 @@ import abstractImage from "@/assets/images/Abstract Design (3).svg"
 import google from "@/assets/icons/googleIcon.svg"
 import facebook from "@/assets/icons/loginFacebook.svg"
 import apple from "@/assets/icons/appleIcon.svg"
-import eyeIcon from "@/assets/icons/eyeIcon.svg"
 import { Footer } from "@/components/layout/Footer";
 import { Testimonials } from "@/components/sections/home/Testimonials";
 import { InputField } from "@/components/ui/InputField";
 import Link from "next/link";
-import { useState } from "react";
+import { PasswordInput } from "@/components/PasswordInput";
 
 const socialIcons = [
   google,
@@ -20,13 +17,10 @@ const socialIcons = [
   apple
 ]
 
-const inputClasses = "flex-1 bg-transparent outline-none placeholder:font-light placeholder:text-[#59595A] text-sm text-[#B3B3B3]"
-
 export default function SignUp() {
-  const [visible, setVisible] = useState(false)
   return (
     <>
-      <section className="mt-28 lg:mt-40">
+      <section className="mt-32 lg:mt-40">
         <div className="container">
           <div className="p-8 lg:py-20 bg-[#1C1C1C] rounded-2xl border border-[#262626] lg:max-w-5xl lg:mx-auto relative z-0">
 
@@ -41,18 +35,7 @@ export default function SignUp() {
                 <InputField type="email" name="email" placeholder="Enter First Name" />
                 <InputField type="email" name="email" placeholder="Enter Last Name" />
                 <InputField type="email" name="email" placeholder="Enter your Email" />
-                <div className="p-4 lg:p-5 rounded-full bg-[#191919] border border-[#262626] flex items-center justify-between">
-                  <input
-                    type={visible ? "text" : "password"}
-                    name="password"
-                    placeholder="Enter your Password"
-                    required
-                    className={inputClasses}
-                  />
-                  <Image src={eyeIcon} alt="Show password" className="ml-2 cursor-pointer"
-                    onClick={() => setVisible(!visible)}
-                  />
-                </div>
+                <PasswordInput />
 
               </form>
               <div className="lg:max-w-sm lg:mx-auto mt-8">
