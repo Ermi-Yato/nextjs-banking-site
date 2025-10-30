@@ -36,28 +36,30 @@ export const Testimonials = () => {
           </div>
         </div>
 
-        <div className="flex lg:justify-center mt-12 p-5  border border-[#262626] rounded-xl overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_30%,black_70%,transparent)]">
-          <div className="flex gap-12 lg:gap-24">
-            {testimonials.map(testimonial => (
-              <div key={testimonial.name} className="flex-none -translate-x-[365px] lg:-translate-x-0">
-                <div className="flex flex-row justify-between items-center gap-4">
-                  <hr className="w-full text-[#262626]" />
-                  <Image src={quoteICon} alt="icon" />
-                  <hr className="w-full text-[#262626]" />
+        <div className="relative">
+          <div className="flex lg:justify-center mt-12 p-5  border border-[#262626] rounded-xl overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_30%,black_70%,transparent)]">
+            <div className="flex gap-12 lg:gap-24">
+              {testimonials.map(testimonial => (
+                <div key={testimonial.name} className="flex-none -translate-x-[365px] lg:-translate-x-0">
+                  <div className="flex flex-row justify-between items-center gap-4">
+                    <hr className="w-full text-[#262626]" />
+                    <Image src={quoteICon} alt="icon" />
+                    <hr className="w-full text-[#262626]" />
+                  </div>
+                  <p className="text-sm lg:text-base text-center mt-6 lg:mt-12 max-w-xs mx-auto text-[#59595A]">{testimonial.feedback}</p>
+                  <h5 className="text-[#CAFF33] font-medium text-center mt-6 lg:mt-12">{testimonial.name}</h5>
                 </div>
-                <p className="text-sm lg:text-base text-center mt-6 lg:mt-12 max-w-xs mx-auto">{testimonial.feedback}</p>
-                <h5 className="text-[#CAFF33] font-medium text-center mt-6 lg:mt-12">{testimonial.name}</h5>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="flex justify-center mt-8 gap-5">
-          <div className="size-12 rounded-full bg-[#1C1C1C] border border-[#262626] flex justify-center items-center">
-            <Image src={backwardICon} alt="icon" />
-          </div>
-          <div className="size-12 rounded-full bg-[#1C1C1C] border border-[#262626] flex justify-center items-center">
-            <Image src={forwardIcon} alt="icon" />
+          <div className="flex justify-center mt-8 gap-5 lg:justify-between">
+            <button className="size-12 rounded-full bg-[#1C1C1C] border border-[#262626] flex justify-center items-center cursor-pointer lg:absolute lg:top-1/2 lg:-translate-y-1/2">
+              <Image src={backwardICon} alt="icon" />
+            </button>
+            <button className="size-12 rounded-full bg-[#1C1C1C] border border-[#262626] flex justify-center items-center cursor-pointer lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2">
+              <Image src={forwardIcon} alt="icon" />
+            </button>
           </div>
         </div>
       </div>

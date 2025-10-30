@@ -46,7 +46,7 @@ export const Navbar = () => {
             </div>
 
 
-            <div className="hidden lg:block">
+            <div className="hidden md:block">
               <div className="flex gap-2">
                 <Link href="/signup">
                   <Button btnType="secondary" size="md" dropShadow="yes">Sign Up</Button>
@@ -58,9 +58,9 @@ export const Navbar = () => {
             </div>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="w-14 h-10 bg-[#CAFF33] inline-flex items-center rounded-full justify-center lg:hidden">
+              className="w-14 h-10 bg-[#CAFF33] inline-flex items-center rounded-full justify-center md:hidden">
               {/* <Image src={hamburger} alt="menu icon" /> */}
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1C1C1C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-menu md:hidden" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="#1C1C1C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-menu md:hidden" >
                 <line x1="3" y1="6" x2="21" y2="6" className={twMerge("origin-left transition duration-300", isMenuOpen && "rotate-45 -translate-y-1")}></line>
                 <line x1="3" y1="12" x2="21" y2="12" className={twMerge(isMenuOpen && "opacity-0")}></line>
                 <line x1="3" y1="18" x2="21" y2="18" className={twMerge("origin-left transition duration-300", isMenuOpen && "-rotate-45 translate-y-1")}></line>

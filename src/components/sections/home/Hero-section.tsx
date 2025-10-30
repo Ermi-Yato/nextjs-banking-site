@@ -9,6 +9,7 @@ import icon from "@/assets/icons/Icon.svg"
 import icon1 from "@/assets/icons/Icon-1.svg"
 import icon2 from "@/assets/icons/Icon-2.svg"
 import icon3 from "@/assets/icons/Icon-3.svg"
+import monthlyIncome from "@/assets/images/monthlyIncome.svg"
 import Link from "next/link"
 
 const currencyIcons = [
@@ -42,6 +43,7 @@ export const Hero = () => {
         <div className="mx-auto">
           <div className="flex justify-center mt-12 relative">
             <Image src={arrowImage} alt="arrow Image" className="absolute -right-20 lg:-right-36 -top-10 lg:-top-6 -z-10 size-72" />
+            <Image src={monthlyIncome} alt="" className="absolute -left-8 -top-6 md:-left-16 md:-top-10 md:w-44 md:h-14" />
             <div className="border border-white/10 p-5 text-xs rounded-lg bg-[#1A1A1A]">
               <Image src={transaction} alt="" />
               <p className="mt-4 font-medium">Money Exchange</p>
